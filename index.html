@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر خيران - تسوق احترافي عبر الواتساب</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- تحذير للأجهزة غير الجوال -->
+    <div id="mobile-warning">
+        <i class="fas fa-mobile-alt"></i>
+        <h2>عذراً، المتجر متاح فقط على الجوال</h2>
+        <p>يرجى فتح الموقع من هاتفك المحمول أو جهاز لوحي لتجربة تسوق أفضل</p>
+    </div>
+
+    <!-- رسالة تأكيد -->
+    <div id="confirmation-message">
+        <i class="fas fa-check-circle"></i> تمت إضافة المنتج إلى السلة!
+    </div>
+
+    <!-- الهيكل الرئيسي للمتجر -->
+    <div id="store-wrapper">
+        <!-- زر سلة التسوق -->
+        <div id="cart-container">
+            <button id="cart-button">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </button>
+        </div>
+        
+        <!-- نافذة السلة -->
+        <div id="cart-modal">
+            <div id="cart-content">
+                <div id="cart-header">
+                    <h2 id="cart-title">سلة التسوق</h2>
+                    <button id="close-cart"><i class="fas fa-times"></i></button>
+                </div>
+                
+                <div id="cart-items">
+                    <!-- العناصر تضاف هنا ديناميكياً -->
+                </div>
+                
+                <div id="cart-total">
+                    <span>المجموع:</span>
+                    <span id="total-amount">0 SAR</span>
+                </div>
+                
+                <div id="cart-actions">
+                    <button id="checkout-button" class="cart-action-button">
+                        <i class="fab fa-whatsapp"></i> اتمام الشراء عبر واتساب
+                    </button>
+                    <button id="continue-shopping" class="cart-action-button">
+                        <i class="fas fa-arrow-left"></i> مواصلة التسوق
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- الترويسة -->
+        <header id="store-header" class="sticky-header">
+            <img id="hero-image" src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="صورة الترويسة">
+        </header>
+
+        <!-- قسم المنتجات -->
+        <section id="products-section">
+            <h2 class="section-title">منتجاتنا المميزة</h2>
+            <div class="products-list">
+                <!-- سيتم تحميل المنتجات ديناميكياً من لوحة التحكم -->
+            </div>
+        </section>
+    </div>
+
+    <!-- رابط مخفي للواتساب -->
+    <a id="whatsapp-link" href="#" target="_blank" style="display: none;"></a>
+
+    <!-- رابط لوحة التحكم -->
+    <a href="admin.html" class="admin-link" title="لوحة التحكم">
+        <i class="fas fa-cog"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- في نهاية body بعد قسم المنتجات وقبل رابط الواتساب -->
+<footer id="store-footer">
+    <div class="footer-content">
+        <!-- قسم التعريف بالمتجر -->
+        <div class="footer-section">
+            <h3 class="footer-title">متجر خيران</h3>
+            <p class="footer-description">
+                متجر إلكتروني متخصص في أحدث الأجهزة الإلكترونية والمنتجات التقنية، نقدم تجربة تسوق فريدة عبر الواتساب مع توصيل سريع لكافة مناطق المملكة.
+            </p>
+        </div>
+        
+        <!-- قسم التواصل الاجتماعي -->
+        <div class="footer-section">
+            <h3 class="footer-title">تواصل معنا</h3>
+            <div class="social-icons">
+                <a href="#" class="social-icon" aria-label="سناب شات">
+                    <i class="fab fa-snapchat"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="تويتر">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="إنستغرام">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="تيك توك">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+            <div class="contact-info">
+                <p><i class="fas fa-phone"></i> +966 55 498 6678</p>
+                <p><i class="fas fa-envelope"></i> info@khiran-store.com</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- شريط الحقوق -->
+    <div class="copyright-bar">
+        <p>&copy; 2023 متجر خيران. جميع الحقوق محفوظة.</p>
+    </div>
+</footer>
